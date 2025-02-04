@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sarthak Deochake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(246, 246, 243);
+            color: rgb(14, 14, 16);
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(215, 215, 219);
+            color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(11, 11, 11);
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 80px 10%;
+        }
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .home img {
+            width: 50%;
+        }
+        .about, .projects, .contact {
+            text-align: center;
+        }
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .contact a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .project-card.expanded {
+            width: 500px; /* Adjust width for expanded state */
+            transition: width 0.3s ease;
+        }
+
+        .full-desc {
+            display: none; /* Initially hidden */
+        }
+
+        .project-card.expanded .full-desc {
+            display: block; /* Show full description when expanded */
+        }
+
+        .read-more-btn {
+            background-color: rgb(70, 70, 171);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .read-more-btn:hover {
+            background-color: rgb(50, 50, 150);
+        }
+        footer {
+            background-color: rgb(215, 215, 219);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+        
+    </style>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left" style="display: flex; align-items: center; justify-content: center;">
+                <h1 style="display: flex; align-items: center; gap: 10px;">
+                    <img src="Images/WhatsApp Image 2025-02-03 at 21.03.26_5a541168.jpg" style="width: 40px; border-radius: 50%;">
+                    <a href="https://github.com/Sarthak-247" target="_blank" style="text-decoration: none; margin-top: 10px; margin-left: 10px;color: black;">Sarthak Deochake</a>
+                </h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li style="font-size: 1.2rem;"><a href="#home"><h4>Home</h4></a></li>
+                    <li><a href="#about"><h4>About</h4></a></li>
+                    <li><a href="#projects"><h4>Projects</h4></a></li>
+                    <li><a href="blog.html" target="_blank"><h4>Blog</h4></a></li>
+                    <li><a href="https://linktr.ee/SarthakDeochake" target="_blank"><h4>Contact</h4></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="home">
+        <div style="margin-top: 40px;">
+            <h5>Welcome to my portfolio website!</h5>
+            <h1 style="font-size: 3rem;">Hey There, I'm <span style="color: rgb(70, 70, 171);">Sarthak</span></h1>
+            <h4>Crafting innovative solutions through code is my passion.</h4>
+            <h4> I thrive on transforming ideas into seamless experiences.</h4>
+        </div>
+        <img src="Images/Bitcoin Coding GIF by Pizza Ninjas.gif" alt="" style="border-radius: 30%; margin-top: 40px;">
+    </section>
+    <section id="about" class="about">
+        <h2 style="font-size: 2.5rem;">About Me</h2>
+        <p style="width: 500px;margin-left: 365px; margin-top: 30px; ">I am Sarthak Deochake, a second-year BTech student specializing in Information Technology. I am passionate about solving real-world problems through technology and innovation. Currently, I am strengthening my programming skills in Python, Java, and C++, building a strong foundation for software development. My goal is to continuously expand my knowledge and contribute to impactful technological advancements.</p>
+    </section>
+    <section id="projects" class="projects">
+        <h2 style="font-size: 2.5rem;">Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Movie Recommendation</h3>
+                <h4>(Using AI/ML)</h4>
+                <p class="short-desc">🔹 Description: Developed a content-based movie recommender system that takes a user-input movie name and suggests similar movies based on genre using cosine similarity..</p>
+                <div class="full-desc" style="display: none;">
+                    <p>🔹 Dataset: TMDB (The Movie Database) for comprehensive movie details.</p>
+                    <p>🔹 Machine Learning Approach: Utilized content-based filtering to recommend movies of the same genre.</p>
+                    <p>🔹 Implementation: Processed and analyzed movie data using Python (Pandas, NumPy, Scikit-Learn) for efficient recommendations.</p>
+                </div>   
+                <button class="read-more-btn">Read More</button> 
+            </div>
+            <div class="project-card">
+                <h3>Hospital Management</h3>
+                <h4>(Using Tkinter)</h4>
+                <p class="short-desc">🔹 Description: Designed and developed a Hospital Management System with an interactive GUI using Tkinter for efficient hospital administration.</p>
+                <div class="full-desc" style="display: none;">
+                    <p>🔹 Features: Facilitates doctor management by allowing the addition, deletion, updating, and viewing of doctor details such as specialization, experience, and consultation fees.</p>
+                    <p>🔹 Search Functionality: Integrated a search system to filter doctor records by specific attributes.</p>
+                    <p>🔹 Implementation: Built using Python and connected to a structured database for real-time data management.</p>
+                </div> 
+                <button class="read-more-btn">Read More</button>   
+            </div>
+            <div class="project-card">
+                <h3>Pharmacy Management System</h3>
+                <h4>(Using C++)</h4>
+                <p class="short-desc">🔹 Description: Developed a Pharmacy Management System using C++ with a focus on efficient data handling and storage.</p>
+                <div class="full-desc" style="display: none;">
+                    <p>🔹 Features: Enabled the management of pharmacy records, including adding, updating, deleting, and viewing details of medicines such as name, quantity, price, and expiry date.</p>
+                    <p>🔹 Data Structure: Utilized the vector data structure for dynamic storage and manipulation of records.</p>
+                    <p>🔹 File Handling: Implemented functionality to save records to a file, ensuring data persistence and easy retrieval.</p>
+                </div> 
+                <button class="read-more-btn">Read More</button>   
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Sarthak Deochake. Some Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

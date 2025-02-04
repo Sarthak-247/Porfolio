@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sarthak Deochake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(249, 247, 244);
+            color: rgb(17, 17, 19);
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(215, 215, 219);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 80px 10%;
+        }
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .blog-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: 350px;
+        }
+        .contact a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: rgb(215, 215, 219);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left" style="font-size: 2rem;"><h5>Blog</h5></div>
+            <div class="right" style="font-size: 3rem;">
+                <ul>
+                    <li><h4><a href="index.html">Portfolio</a></h4></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="blog" class="blog">
+        <div class="blog-container">
+            <div class="blog-card">
+                <h3>The Future of Artificial Intelligence: Trends to Watch in 2025</h3>
+                <p>Artificial Intelligence (AI) is evolving at an unprecedented pace, transforming industries and reshaping our daily lives. In 2025, AI is expected to become more autonomous, creative, and integrated into various sectors. One of the biggest trends will be Generative AI, with models like ChatGPT-5 producing human-like content, code, and even artwork with incredible accuracy...</p>
+            </div>
+            <div class="blog-card">
+                <h3> The Power of Habit: How to Build a Productive Routine</h3>
+                <p>Good habits shape our success. Start small—consistency is key. Whether it’s exercising or reading, set a trigger, follow the routine, and reward yourself. Track progress and stay motivated by surrounding yourself with supportive people. With patience, your productivity will skyrocket. Little changes, big impact!...</p>
+            </div>
+            <div class="blog-card">
+                <h3> The Rise of Electric Vehicles: Are We Ready for the Transition?</h3>
+                <p>Electric vehicles are taking over, with zero emissions and reduced carbon footprints. But there are challenges—like charging infrastructure and range anxiety. As battery prices drop and charging stations grow, EVs will become more mainstream. Are we ready for this shift? The future looks electric!...</p>
+            </div>
+            <div class="blog-card">
+                <h3> The Universe Beyond Our Reach: Mind-Blowing Space Discoveries</h3>
+                <p>Space exploration is blowing our minds! With the James Webb Telescope and discoveries of habitable exoplanets, we’re on the verge of understanding more about our universe. Black holes, Mars missions, and the possibility of life beyond Earth make the cosmos feel less distant and more within reach than ever....</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Sarthak Deochake. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
