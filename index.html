@@ -21,11 +21,13 @@
                 font-size: 1rem;
             }
         }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: rgb(246, 246, 243);
             color: rgb(14, 14, 16);
         }
+        
         nav {
             display: flex;
             justify-content: space-around;
@@ -33,10 +35,12 @@
             height: 80px;
             background-color: rgb(215, 215, 219);
             color: black;
-            position: fixed;
+            /* position: fixed; */
             width: 100%;
             top: 0;
             z-index: 1000;
+            position: sticky;
+            top: 0;
         }
         nav ul {
             display: flex;
@@ -50,9 +54,14 @@
             color: rgb(11, 11, 11);
             font-size: 1.2rem;
         }
-        section {
+        /* section {
             padding: 80px 10%;
+        } */
+        section {
+            padding: 100px 10%;
+            margin-top: 80px; /* Push content below the fixed navbar */
         }
+
         .home {
             display: flex;
             align-items: center;
@@ -150,7 +159,7 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-         @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             nav {
                 flex-direction: column;
                 height: auto;
@@ -173,11 +182,13 @@
                 font-size: 0.9rem;
             }
         }
+
+        
     </style>
    
 </head>
 <body>
-    <header>\
+    <header>
         <nav>
             <div class="left" style="display: flex; align-items: center; justify-content: center;">
                 <h1 style="display: flex; align-items: center; gap: 10px;">
@@ -207,7 +218,8 @@
         <div style="margin-top: 40px;">
             <h5>Welcome to my portfolio website!</h5>
             <h1 style="font-size: 3rem;">Hey There, I'm <span style="color: rgb(70, 70, 171);">Sarthak</span></h1>
-            <h4>Crafting innovative solutions through code is my passion. I thrive on transforming ideas into seamless experiences.</h4>
+            <h4>Crafting innovative solutions through code is my passion.</h4>
+            <h4> I thrive on transforming ideas into seamless experiences.</h4>
         </div>
         <img src="Images/Bitcoin Coding GIF by Pizza Ninjas.gif" alt="" style="border-radius: 30%; margin-top: 40px;">
     </section>
@@ -216,7 +228,7 @@
         <p>I am Sarthak Deochake, a second-year BTech student specializing in Information Technology. I am passionate about solving real-world problems through technology and innovation. Currently, I am strengthening my programming skills in Python, Java, and C++, building a strong foundation for software development. My goal is to continuously expand my knowledge and contribute to impactful technological advancements.</p>
     </section>
     <section id="projects" class="projects">
-        <h2>Projects</h2>
+        <h2 style="font-size: 2.5rem;">Projects</h2>
         <div class="projects-container">
             <div class="project-card">
                 <h3>Movie Recommendation</h3>
