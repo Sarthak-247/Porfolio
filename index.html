@@ -108,6 +108,35 @@
             position: relative;
             width: 100%;
         }
+        /* Dropdown menu styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: rgb(215, 215, 219);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-menu li {
+            padding: 10px 20px;
+        }
+
+        .dropdown-menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         
     </style>
    
@@ -123,9 +152,16 @@
             </div>
             <div class="right">
                 <ul>
-                    <li style="font-size: 1.2rem;"><a href="#home"><h4>Home</h4></a></li>
-                    <li><a href="#about"><h4>About</h4></a></li>
-                    <li><a href="#projects"><h4>Projects</h4></a></li>
+                    <li class="dropdown">
+                        <a href="#"><h4>Home ▾</h4></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- <li><a href="#about"><h4>About</h4></a></li>
+                    <li><a href="#projects"><h4>Projects</h4></a></li> -->
                     <li><a href="blog.html" target="_blank"><h4>Blog</h4></a></li>
                     <li><a href="https://linktr.ee/SarthakDeochake" target="_blank"><h4>Contact</h4></a></li>
                 </ul>
@@ -152,7 +188,7 @@
                 <h3>Movie Recommendation</h3>
                 <h4>(Using AI/ML)</h4>
                 <p class="short-desc">🔹 Description: Developed a content-based movie recommender system that takes a user-input movie name and suggests similar movies based on genre using cosine similarity..</p>
-                <div class="full-desc" style="display: none;">
+                <div class="full-desc">
                     <p>🔹 Dataset: TMDB (The Movie Database) for comprehensive movie details.</p>
                     <p>🔹 Machine Learning Approach: Utilized content-based filtering to recommend movies of the same genre.</p>
                     <p>🔹 Implementation: Processed and analyzed movie data using Python (Pandas, NumPy, Scikit-Learn) for efficient recommendations.</p>
