@@ -58,8 +58,8 @@
             padding: 80px 10%;
         } */
         section {
-            padding: 100px 10%;
-            margin-top: 80px; /* Push content below the fixed navbar */
+            padding: 20px 10%;
+            margin-top: 10px; /* Push content below the fixed navbar */
         }
 
         .home {
@@ -69,6 +69,10 @@
         }
         .home img {
             width: 50%;
+        }
+        .home h1{
+            font-size: 3rem;
+            font-weight: 600;
         }
         .about, .projects, .contact {
             text-align: center;
@@ -182,7 +186,20 @@
                 font-size: 0.9rem;
             }
         }
+        @media screen and (max-width: 768px) {
+            .home {
+                padding: 10px;
+            }
 
+            .home h1 {
+                font-size: 1.5rem; 
+            }
+
+            .home img {
+                width: 90%;
+                max-width: 250px; 
+            }
+        }
         
     </style>
    
@@ -215,9 +232,9 @@
         </nav>
     </header>
     <section id="home" class="home">
-        <div style="margin-top: 40px;">
+        <div>
             <h5>Welcome to my portfolio website!</h5>
-            <h1 style="font-size: 3rem;">Hey There, I'm <span style="color: rgb(70, 70, 171);">Sarthak</span></h1>
+            <h1>Hey There, I'm <span style="color: rgb(70, 70, 171);">Sarthak</span></h1>
             <h4>Crafting innovative solutions through code is my passion.</h4>
             <h4> I thrive on transforming ideas into seamless experiences.</h4>
         </div>
